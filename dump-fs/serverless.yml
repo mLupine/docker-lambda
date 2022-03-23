@@ -132,6 +132,23 @@ functions:
     layers:
       - { Ref: TarARMLambdaLayer }
 
+  dump-dotnet6-x86_64:
+    handler: dump_dotnet6::dump_dotnet6.Function::FunctionHandler_x86_64
+    package:
+      artifact: bin/Release/dump-dotnet6/handler-x86_64.zip
+    runtime: dotnet6
+    architecture: x86_64
+    layers:
+      - { Ref: TarX86LambdaLayer }
+  dump-dotnet6-arm64:
+    handler: dump_dotnet6::dump_dotnet6.Function::FunctionHandler_arm64
+    package:
+      artifact: bin/Release/dump-dotnet6/handler-arm64.zip
+    runtime: dotnet6
+    architecture: arm64
+    layers:
+      - { Ref: TarARMLambdaLayer }
+
   dump-java8al2-x86_64:
     handler: pl.lupin.lambda.DumpJava8AL2_x86_64
     package:

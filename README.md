@@ -36,6 +36,7 @@ the [AWS CLI](https://aws.amazon.com/cli/).
     - [java8.al2](#java8al2)
     - [java11](#java11)
     - [dotnetcore3.1](#dotnetcore31)
+    - [dotnet6](#dotnet6)
     - [provided.al2](#providedal2)
   - [Usage](#usage)
     - [Running Lambda functions](#running-lambda-functions)
@@ -197,6 +198,24 @@ Build images
 | Universal | `mlupin/docker-lambda:dotnetcore3.1-build`        | `ghcr.io/mlupine/docker-lambda:dotnetcore3.1-build`        |
 | x86_64    | `mlupin/docker-lambda:dotnetcore3.1-build-x86_64` | `ghcr.io/mlupine/docker-lambda:dotnetcore3.1-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:dotnetcore3.1-build-arm64`  | `ghcr.io/mlupine/docker-lambda:dotnetcore3.1-build-arm64`  |
+
+### dotnet6
+
+Runtime images
+
+| Platform  | Docker Hub                                  | GitHub Container Registry                            |
+| --------- | ------------------------------------------- | ---------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:dotnet6`              | `ghcr.io/mlupine/docker-lambda:dotnet6`              |
+| x86_64    | `mlupin/docker-lambda:dotnet6-x86_64`       | `ghcr.io/mlupine/docker-lambda:dotnet6-x86_64`       |
+| arm64     | `mlupin/docker-lambda:dotnet6-arm64`        | `ghcr.io/mlupine/docker-lambda:dotnet6-arm64`        |
+
+Build images
+
+| Platform  | Docker Hub                                        | GitHub Container Registry                                  |
+| --------- | ------------------------------------------------- | ---------------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:dotnet6-build`              | `ghcr.io/mlupine/docker-lambda:dotnet6-build`              |
+| x86_64    | `mlupin/docker-lambda:dotnet6-build-x86_64`       | `ghcr.io/mlupine/docker-lambda:dotnet6-build-x86_64`       |
+| arm64     | `mlupin/docker-lambda:dotnet6-build-arm64`        | `ghcr.io/mlupine/docker-lambda:dotnet6-build-arm64`        |
 
 ### provided.al2
 

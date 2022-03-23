@@ -34,6 +34,9 @@ examples/dotnetcore2.1/pub
 examples/dotnetcore3.1/bin
 examples/dotnetcore3.1/obj
 examples/dotnetcore3.1/pub
+examples/dotnet6/bin
+examples/dotnet6/obj
+examples/dotnet6/pub
 examples/java/bin
 examples/java/build
 examples/go1.x/handler
