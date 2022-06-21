@@ -30,6 +30,7 @@ the [AWS CLI](https://aws.amazon.com/cli/).
   - [Docker tags](#docker-tags)
     - [nodejs12.x](#nodejs12x)
     - [nodejs14.x](#nodejs14x)
+    - [nodejs16.x](#nodejs16x)
     - [python3.8](#python38)
     - [python3.9](#python39)
     - [ruby2.7](#ruby27)
@@ -90,6 +91,25 @@ Build images
 | Universal | `mlupin/docker-lambda:nodejs14.x-build`        | `ghcr.io/mlupine/docker-lambda:nodejs14.x-build`        |
 | x86_64    | `mlupin/docker-lambda:nodejs14.x-build-x86_64` | `ghcr.io/mlupine/docker-lambda:nodejs14.x-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:nodejs14.x-build-arm64`  | `ghcr.io/mlupine/docker-lambda:nodejs14.x-build-arm64`  |
+
+### nodejs16.x
+
+Runtime images
+
+| Platform  | Docker Hub                               | GitHub Container Registry                         |
+| --------- | ---------------------------------------- | ------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:nodejs16.x`        | `ghcr.io/mlupine/docker-lambda:nodejs16.x`        |
+| x86_64    | `mlupin/docker-lambda:nodejs16.x-x86_64` | `ghcr.io/mlupine/docker-lambda:nodejs16.x-x86_64` |
+| arm64     | `mlupin/docker-lambda:nodejs16.x-arm64`  | `ghcr.io/mlupine/docker-lambda:nodejs16.x-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                     | GitHub Container Registry                               |
+| --------- | ---------------------------------------------- | ------------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:nodejs16.x-build`        | `ghcr.io/mlupine/docker-lambda:nodejs16.x-build`        |
+| x86_64    | `mlupin/docker-lambda:nodejs16.x-build-x86_64` | `ghcr.io/mlupine/docker-lambda:nodejs16.x-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:nodejs16.x-build-arm64`  | `ghcr.io/mlupine/docker-lambda:nodejs16.x-build-arm64`  |
+
 
 ### python3.8
 
