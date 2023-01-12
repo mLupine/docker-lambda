@@ -19,7 +19,7 @@ RUN pip install -U pip setuptools wheel --no-cache-dir && \
   pip install pipx --no-cache-dir && \
   pipx install virtualenv && \
   pipx install pipenv && \
-  pipx install poetry==1.1.12 && \
+  pipx install poetry==1.3.2 && \
   pipx install awscli==1.* && \
   pipx install aws-lambda-builders==1.2.0 && \
   pipx install aws-sam-cli==1.15.0
