@@ -34,6 +34,7 @@ the [AWS CLI](https://aws.amazon.com/cli/).
     - [nodejs18.x](#nodejs18x)
     - [python3.8](#python38)
     - [python3.9](#python39)
+    - [python3.10](#python310)
     - [ruby2.7](#ruby27)
     - [java8.al2](#java8al2)
     - [java11](#java11)
@@ -165,6 +166,24 @@ Build images
 | Universal | `mlupin/docker-lambda:python3.9-build`        | `ghcr.io/mlupine/docker-lambda:python3.9-build`        |
 | x86_64    | `mlupin/docker-lambda:python3.9-build-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.9-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:python3.9-build-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.9-build-arm64`  |
+
+### python3.10
+
+Runtime images
+
+| Platform  | Docker Hub                               | GitHub Container Registry                         |
+| --------- | ---------------------------------------- | ------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:python3.10`        | `ghcr.io/mlupine/docker-lambda:python3.10`        |
+| x86_64    | `mlupin/docker-lambda:python3.10-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.10-x86_64` |
+| arm64     | `mlupin/docker-lambda:python3.10-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.10-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                     | GitHub Container Registry                               |
+| --------- | ---------------------------------------------- | ------------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:python3.10-build`        | `ghcr.io/mlupine/docker-lambda:python3.10-build`        |
+| x86_64    | `mlupin/docker-lambda:python3.10-build-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.10-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:python3.10-build-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.10-build-arm64`  |
 
 ### ruby2.7
 
