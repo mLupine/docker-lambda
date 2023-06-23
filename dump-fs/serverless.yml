@@ -136,6 +136,27 @@ functions:
     layers:
       - { Ref: TarARMLambdaLayer }
 
+  dump-ruby32-x86_64:
+    handler: dump-ruby32/handler.lambda_handler_x86_64
+    package:
+      patterns:
+        - "!**"
+        - "dump-ruby32/**"
+    runtime: ruby3.2
+    architecture: x86_64
+    layers:
+      - { Ref: TarX86LambdaLayer }
+  dump-ruby32-arm64:
+    handler: dump-ruby32/handler.lambda_handler_arm64
+    package:
+      patterns:
+        - "!**"
+        - "dump-ruby32/**"
+    runtime: ruby3.2
+    architecture: arm64
+    layers:
+      - { Ref: TarARMLambdaLayer }
+
   dump-dotnetcore31-x86_64:
     handler: dump_dotnetcore31::dump_dotnetcore31.Function::FunctionHandler_x86_64
     package:

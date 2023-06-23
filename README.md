@@ -36,6 +36,7 @@ the [AWS CLI](https://aws.amazon.com/cli/).
     - [python3.9](#python39)
     - [python3.10](#python310)
     - [ruby2.7](#ruby27)
+    - [ruby3.2](#ruby32)
     - [java8.al2](#java8al2)
     - [java11](#java11)
     - [dotnetcore3.1](#dotnetcore31)
@@ -202,6 +203,24 @@ Build images
 | Universal | `mlupin/docker-lambda:ruby2.7-build`        | `ghcr.io/mlupine/docker-lambda:ruby2.7-build`        |
 | x86_64    | `mlupin/docker-lambda:ruby2.7-build-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby2.7-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:ruby2.7-build-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby2.7-build-arm64`  |
+
+### ruby3.2
+
+Runtime images
+
+| Platform  | Docker Hub                            | GitHub Container Registry                      |
+| --------- | ------------------------------------- | ---------------------------------------------- |
+| Universal | `mlupin/docker-lambda:ruby3.2`        | `ghcr.io/mlupine/docker-lambda:ruby3.2`        |
+| x86_64    | `mlupin/docker-lambda:ruby3.2-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby3.2-x86_64` |
+| arm64     | `mlupin/docker-lambda:ruby3.2-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby3.2-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                  | GitHub Container Registry                            |
+| --------- | ------------------------------------------- | ---------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:ruby3.2-build`        | `ghcr.io/mlupine/docker-lambda:ruby3.2-build`        |
+| x86_64    | `mlupin/docker-lambda:ruby3.2-build-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby3.2-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:ruby3.2-build-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby3.2-build-arm64`  |
 
 ### java8.al2
 

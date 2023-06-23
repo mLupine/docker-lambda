@@ -27,6 +27,7 @@ docker run --rm -it mlupin/docker-lambda:python3.10-build pip install marisa-tri
 
 cd ${EXAMPLES_DIR}/ruby
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby2.7 lambda_function.lambda_handler
+docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby3.2 lambda_function.lambda_handler
 
 cd ${EXAMPLES_DIR}/java
 docker run --rm -v "$PWD":/app -w /app mlupin/docker-lambda:java8.al2-build gradle build

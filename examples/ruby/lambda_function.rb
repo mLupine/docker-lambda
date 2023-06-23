@@ -2,6 +2,7 @@ require 'pp'
 
 # docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby2.5 lambda_function.lambda_handler
 # docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby2.7 lambda_function.lambda_handler
+# docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby3.2 lambda_function.lambda_handler
 
 def lambda_handler(event:, context:)
   info = {
