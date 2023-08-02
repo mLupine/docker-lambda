@@ -19,6 +19,6 @@
     "should": "^8.4.0"
   },
   "dependencies": {
-    "serverless": "^3.25.1"
+    "serverless": "^3.33.0"
   }
 }

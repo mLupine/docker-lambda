@@ -115,6 +115,27 @@ functions:
     layers:
       - { Ref: TarARMLambdaLayer }
 
+  dump-python311-x86_64:
+    handler: dump-python311/handler.lambda_handler_x86_64
+    package:
+      patterns:
+        - "!**"
+        - "dump-python311/**"
+    runtime: python3.11
+    architecture: x86_64
+    layers:
+      - { Ref: TarX86LambdaLayer }
+  dump-python311-arm64:
+    handler: dump-python311/handler.lambda_handler_arm64
+    package:
+      patterns:
+        - "!**"
+        - "dump-python311/**"
+    runtime: python3.11
+    architecture: arm64
+    layers:
+      - { Ref: TarARMLambdaLayer }
+
   dump-ruby27-x86_64:
     handler: dump-ruby27/handler.lambda_handler_x86_64
     package:
@@ -132,6 +153,27 @@ functions:
         - "!**"
         - "dump-ruby27/**"
     runtime: ruby2.7
+    architecture: arm64
+    layers:
+      - { Ref: TarARMLambdaLayer }
+
+  dump-ruby32-x86_64:
+    handler: dump-ruby32/handler.lambda_handler_x86_64
+    package:
+      patterns:
+        - "!**"
+        - "dump-ruby32/**"
+    runtime: ruby3.2
+    architecture: x86_64
+    layers:
+      - { Ref: TarX86LambdaLayer }
+  dump-ruby32-arm64:
+    handler: dump-ruby32/handler.lambda_handler_arm64
+    package:
+      patterns:
+        - "!**"
+        - "dump-ruby32/**"
+    runtime: ruby3.2
     architecture: arm64
     layers:
       - { Ref: TarARMLambdaLayer }
@@ -200,6 +242,23 @@ functions:
     package:
       artifact: bin/dump-java11-arm64.zip
     runtime: java11
+    architecture: arm64
+    layers:
+      - { Ref: TarARMLambdaLayer }
+
+  dump-java17-x86_64:
+    handler: pl.lupin.lambda.DumpJava17_x86_64
+    package:
+      artifact: bin/dump-java17-x86_64.zip
+    runtime: java17
+    architecture: x86_64
+    layers:
+      - { Ref: TarX86LambdaLayer }
+  dump-java17-arm64:
+    handler: pl.lupin.lambda.DumpJava17_arm64
+    package:
+      artifact: bin/dump-java17-arm64.zip
+    runtime: java17
     architecture: arm64
     layers:
       - { Ref: TarARMLambdaLayer }

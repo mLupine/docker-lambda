@@ -12,6 +12,8 @@ base/dump-java8al2/bin
 base/dump-java8al2/build
 base/dump-java11/bin
 base/dump-java11/build
+base/dump-java17/bin
+base/dump-java17/build
 base/dump-dotnetcore20/bin
 base/dump-dotnetcore20/obj
 base/dump-dotnetcore21/bin

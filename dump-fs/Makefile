@@ -58,6 +58,11 @@ build-java11:
 	cp -a dump-java11/build/distributions/app.zip bin/dump-java11-x86_64.zip
 	cp -a dump-java11/build/distributions/app.zip bin/dump-java11-arm64.zip
 
+build-java17:
+	docker run --rm -v "$(realpath ./dump-java17):/app" -w /app gradle:jdk17 gradle build
+	cp -a dump-java17/build/distributions/app.zip bin/dump-java17-x86_64.zip
+	cp -a dump-java17/build/distributions/app.zip bin/dump-java17-arm64.zip
+
 build-provided.al2-x86_64:
 	export GO111MODULE=on && \
 	cd dump-provided.al2/x86_64/ && go mod download
@@ -76,7 +81,7 @@ build-provided.al2-arm64:
 
 build-provided.al2: build-provided.al2-x86_64 build-provided.al2-arm64
 
-build: build-dotnetcore31 build-dotnet6 build-java8.al2 build-java11 build-provided.al2
+build: build-dotnetcore31 build-dotnet6 build-java8.al2 build-java11 build-java17 build-provided.al2
 
 clean:
 	rm -rf ./bin ./vendor

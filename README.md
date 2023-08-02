@@ -35,9 +35,12 @@ the [AWS CLI](https://aws.amazon.com/cli/).
     - [python3.8](#python38)
     - [python3.9](#python39)
     - [python3.10](#python310)
+    - [python3.11](#python311)
     - [ruby2.7](#ruby27)
+    - [ruby3.2](#ruby32)
     - [java8.al2](#java8al2)
     - [java11](#java11)
+    - [java17](#java17)
     - [dotnetcore3.1](#dotnetcore31)
     - [dotnet6](#dotnet6)
     - [provided.al2](#providedal2)
@@ -185,6 +188,24 @@ Build images
 | x86_64    | `mlupin/docker-lambda:python3.10-build-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.10-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:python3.10-build-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.10-build-arm64`  |
 
+### python3.11
+
+Runtime images
+
+| Platform  | Docker Hub                               | GitHub Container Registry                         |
+| --------- | ---------------------------------------- | ------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:python3.11`        | `ghcr.io/mlupine/docker-lambda:python3.11`        |
+| x86_64    | `mlupin/docker-lambda:python3.11-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.11-x86_64` |
+| arm64     | `mlupin/docker-lambda:python3.11-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.11-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                     | GitHub Container Registry                               |
+| --------- | ---------------------------------------------- | ------------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:python3.11-build`        | `ghcr.io/mlupine/docker-lambda:python3.11-build`        |
+| x86_64    | `mlupin/docker-lambda:python3.11-build-x86_64` | `ghcr.io/mlupine/docker-lambda:python3.11-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:python3.11-build-arm64`  | `ghcr.io/mlupine/docker-lambda:python3.11-build-arm64`  |
+
 ### ruby2.7
 
 Runtime images
@@ -202,6 +223,24 @@ Build images
 | Universal | `mlupin/docker-lambda:ruby2.7-build`        | `ghcr.io/mlupine/docker-lambda:ruby2.7-build`        |
 | x86_64    | `mlupin/docker-lambda:ruby2.7-build-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby2.7-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:ruby2.7-build-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby2.7-build-arm64`  |
+
+### ruby3.2
+
+Runtime images
+
+| Platform  | Docker Hub                            | GitHub Container Registry                      |
+| --------- | ------------------------------------- | ---------------------------------------------- |
+| Universal | `mlupin/docker-lambda:ruby3.2`        | `ghcr.io/mlupine/docker-lambda:ruby3.2`        |
+| x86_64    | `mlupin/docker-lambda:ruby3.2-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby3.2-x86_64` |
+| arm64     | `mlupin/docker-lambda:ruby3.2-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby3.2-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                  | GitHub Container Registry                            |
+| --------- | ------------------------------------------- | ---------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:ruby3.2-build`        | `ghcr.io/mlupine/docker-lambda:ruby3.2-build`        |
+| x86_64    | `mlupin/docker-lambda:ruby3.2-build-x86_64` | `ghcr.io/mlupine/docker-lambda:ruby3.2-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:ruby3.2-build-arm64`  | `ghcr.io/mlupine/docker-lambda:ruby3.2-build-arm64`  |
 
 ### java8.al2
 
@@ -238,6 +277,24 @@ Build images
 | Universal | `mlupin/docker-lambda:java11-build`        | `ghcr.io/mlupine/docker-lambda:java11-build`        |
 | x86_64    | `mlupin/docker-lambda:java11-build-x86_64` | `ghcr.io/mlupine/docker-lambda:java11-build-x86_64` |
 | arm64     | `mlupin/docker-lambda:java11-build-arm64`  | `ghcr.io/mlupine/docker-lambda:java11-build-arm64`  |
+
+### java17
+
+Runtime images
+
+| Platform  | Docker Hub                           | GitHub Container Registry                     |
+| --------- | ------------------------------------ | --------------------------------------------- |
+| Universal | `mlupin/docker-lambda:java17`        | `ghcr.io/mlupine/docker-lambda:java17`        |
+| x86_64    | `mlupin/docker-lambda:java17-x86_64` | `ghcr.io/mlupine/docker-lambda:java17-x86_64` |
+| arm64     | `mlupin/docker-lambda:java17-arm64`  | `ghcr.io/mlupine/docker-lambda:java17-arm64`  |
+
+Build images
+
+| Platform  | Docker Hub                                 | GitHub Container Registry                           |
+| --------- | ------------------------------------------ | --------------------------------------------------- |
+| Universal | `mlupin/docker-lambda:java17-build`        | `ghcr.io/mlupine/docker-lambda:java17-build`        |
+| x86_64    | `mlupin/docker-lambda:java17-build-x86_64` | `ghcr.io/mlupine/docker-lambda:java17-build-x86_64` |
+| arm64     | `mlupin/docker-lambda:java17-build-arm64`  | `ghcr.io/mlupine/docker-lambda:java17-build-arm64`  |
 
 ### dotnetcore3.1
 

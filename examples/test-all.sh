@@ -19,6 +19,7 @@ cd ${EXAMPLES_DIR}/python
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:python3.8 lambda_function.lambda_handler
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:python3.9 lambda_function.lambda_handler
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:python3.10 lambda_function.lambda_handler
+docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:python3.11 lambda_function.lambda_handler
 
 cd ${EXAMPLES_DIR}/python
 docker run --rm -it mlupin/docker-lambda:python3.8-build pip install marisa-trie
@@ -27,11 +28,13 @@ docker run --rm -it mlupin/docker-lambda:python3.10-build pip install marisa-tri
 
 cd ${EXAMPLES_DIR}/ruby
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby2.7 lambda_function.lambda_handler
+docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:ruby3.2 lambda_function.lambda_handler
 
 cd ${EXAMPLES_DIR}/java
 docker run --rm -v "$PWD":/app -w /app mlupin/docker-lambda:java8.al2-build gradle build
 docker run --rm -v "$PWD/build/docker":/var/task mlupin/docker-lambda:java8.al2 pl.lupin.lambda.ExampleHandler '{"some": "event"}'
 docker run --rm -v "$PWD/build/docker":/var/task mlupin/docker-lambda:java11 pl.lupin.lambda.ExampleHandler '{"some": "event"}'
+docker run --rm -v "$PWD/build/docker":/var/task mlupin/docker-lambda:java17 pl.lupin.lambda.ExampleHandler '{"some": "event"}'
 
 cd ${EXAMPLES_DIR}/dotnetcore3.1
 docker run --rm -v "$PWD":/var/task mlupin/docker-lambda:dotnetcore3.1-build dotnet publish -c Release -o pub
