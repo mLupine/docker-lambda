@@ -1,0 +1,23 @@
+ARG RUNTIME
+ARG VERSION
+FROM public.ecr.aws/lambda/${RUNTIME}:${VERSION} as amazonlinux
+
+FROM mlupin/lambda-base-2023:build
+
+ARG VERSION
+ARG ARCH
+
+ENV PATH=/var/lang/bin:$PATH \
+    LD_LIBRARY_PATH=/lib64:/usr/lib64:/var/lang/lib:$LD_LIBRARY_PATH \
+    AWS_EXECUTION_ENV=AWS_Lambda_nodejs"${VERSION}".x \
+    AWS_EXECUTION_ARCH="${ARCH}" \
+    NODE_PATH=/opt/nodejs/node"${VERSION}"/node_modules:/opt/nodejs/node_modules:/var/runtime/node_modules
+
+COPY --from=amazonlinux /var/runtime /var/runtime
+COPY --from=amazonlinux /var/lang /var/lang
+COPY --from=amazonlinux /var/rapid /var/rapid
+
+# Add these as a separate layer as they get updated frequently
+RUN pipx install awscli && \
+    pipx install aws-lambda-builders && \
+    pipx install aws-sam-cli

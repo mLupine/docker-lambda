@@ -1,0 +1,29 @@
+ARG RUNTIME
+ARG VERSION
+FROM public.ecr.aws/lambda/${RUNTIME}:${VERSION} as amazonlinux
+
+FROM mlupin/lambda-base-2023:build
+
+ARG ARCH
+ARG VERSION
+ARG RUNTIME
+
+ENV PATH=/var/lang/bin:$PATH \
+    LD_LIBRARY_PATH=/lib64:/usr/lib64:/var/lang/lib:$LD_LIBRARY_PATH \
+    AWS_EXECUTION_ENV=AWS_Lambda_${RUNTIME}${VERSION} \
+    AWS_EXECUTION_ARCH="${ARCH}" \
+    PKG_CONFIG_PATH=/var/lang/lib/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig \
+    PIPX_BIN_DIR=/var/lang/bin \
+    PIPX_HOME=/var/lang/pipx
+
+COPY --from=amazonlinux /var/runtime /var/runtime
+COPY --from=amazonlinux /var/lang /var/lang
+COPY --from=amazonlinux /var/rapid /var/rapid
+
+# Add these as a separate layer as they get updated frequently
+RUN pipx install virtualenv && \
+    pipx install pipenv && \
+    pipx install poetry && \
+    pipx install awscli && \
+    pipx install aws-lambda-builders && \
+    pipx install aws-sam-cli \

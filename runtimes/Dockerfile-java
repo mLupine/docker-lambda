@@ -1,0 +1,32 @@
+ARG RUNTIME
+ARG VERSION
+FROM public.ecr.aws/lambda/${RUNTIME}:${VERSION} as amazonlinux
+
+FROM mlupin/lambda-base-2023:build
+
+ARG ARCH
+ARG RUNTIME
+ARG VERSION
+ARG GRADLE_VERSION="8.5"
+ARG MAVEN_VERSION="3.9.6"
+
+ENV PATH=/var/lang/bin:$PATH \
+    LD_LIBRARY_PATH=/lib64:/usr/lib64:/var/lang/lib:$LD_LIBRARY_PATH \
+    AWS_EXECUTION_ENV=AWS_Lambda_"${RUNTIME}${VERSION}" \
+    AWS_EXECUTION_ARCH="${ARCH}"
+COPY --from=amazonlinux /var/runtime /var/runtime
+COPY --from=amazonlinux /var/lang /var/lang
+COPY --from=amazonlinux /var/rapid /var/rapid
+
+# Add these as a separate layer as they get updated frequently
+RUN mkdir /usr/local/gradle && curl -L -o gradle.zip https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
+    unzip -qd /usr/local/gradle gradle.zip && rm gradle.zip && mkdir /usr/local/maven && \
+    curl -L https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz | \
+    tar -zx -C /usr/local/maven
+
+ENV PATH="/usr/local/gradle/gradle-8.2.1/bin:/usr/local/maven/apache-maven-3.9.3/bin:${PATH}"
+
+# Add these as a separate layer as they get updated frequently
+RUN pipx install awscli && \
+    pipx install aws-lambda-builders && \
+    pipx install aws-sam-cli
